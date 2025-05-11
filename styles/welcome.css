@@ -1,0 +1,32 @@
+.up-header {
+    width: 100vw;
+    rotate: 180deg;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.down-header {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.blury-cube-left {
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-color);
+    margin: 150px;
+    transform: skew(20deg);
+    filter: drop-shadow(0px 0px 100px var(--primary-color)) blur(5px);
+}
+
+.blury-cube-right {
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-color);
+    margin: 150px;
+    transform: skew(-20deg);
+    filter: drop-shadow(0 0 100px var(--primary-color)) blur(5px);
+}

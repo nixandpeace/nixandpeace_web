@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 :root {
-    --text-color: #e0ddf8;
+    --text-color: #a5a3ae;
     --background-color: #0b061f;
     --primary-color: #3d2dda;
+    --primary-shadow: rgb(33, 25, 110);
     --secondary-color: #841b5e;
     --accent-color: #d84355;
+}
+
+* {
+    z-index: 1;
 }
 
 html, body {
@@ -17,8 +24,21 @@ html, body {
     overflow: hidden;
     height: 100vh;
     width: 100vw;
+}
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.up-header {
+    width: 100vw;
+    rotate: 180deg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.down-header {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
 }

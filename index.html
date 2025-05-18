@@ -11,6 +11,20 @@
     <img src="./assets/up_down.svg" class="up-header">
     <img src="./assets/up_down.svg" class="down-header">
     <div class="blury-cube-left"></div>
+    <div class="text">
+        <h1>Welcome to <br> the world of</h1>
+        <h1 class="name">nixandpeace</h1>
+        <button class="button-play">
+            <img class="play" src="./assets/play.svg" alt="">
+        </button>
+    </div>
     <div class="blury-cube-right"></div>
+    <script>
+        const buttonPlay = document.querySelector('.button-play');
+        
+        buttonPlay.addEventListener('click', () => {
+            window.location.href = './nav/';
+        });
+    </script>
 </body>
 </html>

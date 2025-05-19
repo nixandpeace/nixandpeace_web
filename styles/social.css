@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+* {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 80px;
+    text-shadow: 15px -15px 12px var(--text-color);
+    font-weight: 400;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cont-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.cont-sec > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+}
+
+.bandcamp > img, .soundcloud > img {
+    height: 290px;
+}
+
+.youtube > img {
+    height: 200px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+p {
+    font-size: 30px;
+}
+
+img {
+    width: 300px;
+}
+
+.bandcamp, .soundcloud, .youtube {
+    transition-duration: 0.2s;
+}
+
+.bandcamp:hover, .soundcloud:hover, .youtube:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}

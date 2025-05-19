@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nixandpeace</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/music.css">
+</head>
+<body>
+    <img src="../assets/up_down.svg" class="up-header">
+    <img src="../assets/up_down.svg" class="down-header">
+    
+    <h1>Music</h1>
+    <p class="discography">discography</p>
+    <div class="cont">
+        <button class="left">
+            <i class="nf nf-fa-play"></i>
+        </button>
+        <div class="music-cont">
+            <div class="cube ever-f">
+                <p>ever feel lost in <br>nostalgia,<br>because I do<br>[ambient mix]</p>
+            </div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+
+            <div class="cube celestica">
+                <p>celestica<br>[remix]</p>
+            </div>
+            <div class="cube dwallah">
+                <p>dwallah<br>[ft. VILL]</p>
+            </div>
+            <div class="cube forgetful">
+                <p>fogetful<br>creatures</p>
+            </div>
+            <div class="cube cyberpsycho">
+                <p>cyberpsycho<br>[clip]</p>
+            </div>
+            <div class="cube eureka">
+                <p>eureka<br>[remix]</p>
+            </div>
+
+            <div class="cube ent">
+                <p>entering_nostalgic<br>_emotions</p>
+            </div>
+            <div class="cube night">
+                <p>NIGHTS [2021]</p>
+            </div>
+            <div class="cube noise">
+                <p>NOISE [2022]</p>
+            </div>
+             <div class="cube inpeace">
+                <p>inpeace</p>
+            </div>
+            <div class="cube clouds">
+                <p>clouds<br>[ft. VILL]</p>
+            </div>
+        </div>
+        <button class="right">
+            <i class="nf nf-fa-play"></i>
+        </button>
+    </div>
+    
+    
+    <button class="home">
+        <img src="../assets/play.svg"> home page
+    </button>
+
+    <script src="../scripts/homebuttom.js"></script>
+    <script>
+        const musicCont = document.querySelector('.music-cont');
+
+        musicCont.scrollLeft = 1200;
+
+        const leftButton = document.querySelector('.left');
+        const rightButton = document.querySelector('.right');
+
+        let leftinvis = false;
+        let rightinvis = false;
+
+        leftButton.addEventListener('click', () => {
+            musicCont.scrollLeft -= 1200;
+
+            if(musicCont.scrollLeft <= 1200) {
+                leftButton.classList.add('hidden');
+                leftinvis = true;
+            } else {
+                leftButton.classList.remove('hidden');
+                leftinvis = false;
+            }
+
+            if(rightinvis) {
+                rightButton.classList.remove('hidden');
+                rightinvis = false;
+            }
+        });
+
+        rightButton.addEventListener('click', () => {
+            musicCont.scrollLeft += 1200;
+
+
+
+            if(musicCont.scrollLeft >= 1000) {
+                rightButton.classList.add('hidden');
+                rightinvis = true;
+            } else {
+                rightButton.classList.remove('hidden');
+                rightinvis = false;
+            }
+            
+            if(leftinvis) {
+                leftButton.classList.remove('hidden');
+                leftinvis = false;
+            }
+        });
+
+        const cards = document.querySelectorAll('.cube');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                window.location.href = 'https://soundcloud.com/n_a_p2019';
+            });
+        });
+    </script>
+</body>
+</html>

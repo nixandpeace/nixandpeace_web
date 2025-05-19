@@ -16,20 +16,44 @@
     <div class="cont">
         <div class="top">
             <div class="music sec">
-                <i class="nf nf-fa-itunes_note"></i> Music
+                <i class="nf nf-fa-itunes_note"></i> <span>Music</span>
             </div>
             <div class="contact sec">
-                Contact <i class="nf nf-md-chat"></i>
+                <span class="dif">Contact</span> <i class="nf nf-md-chat"></i>
             </div>
         </div>
         <div class="bottom">
             <div class="social sec">
-                <i class="nf nf-fae-cloud"></i> Social Media
+                <i class="nf nf-fae-cloud"></i> <span>Social Media</span>
             </div>
             <div class="about sec">
-                About Me <i class="nf nf-oct-feed_person"></i> 
+                <span class="dif">About</span> <i class="nf nf-oct-feed_person"></i> 
             </div>
         </div>
     </div>
+    <script>
+        const contact = document.querySelector('.contact');
+
+        contact.addEventListener('click', () => {
+            window.location.href = '/contact';
+        });
+
+        const social = document.querySelector('.social');
+
+        social.addEventListener('click', () => {
+            window.location.href = '/social';
+        });
+
+        const about = document.querySelector('.about');
+        about.addEventListener('click', () => {
+            window.location.href = '/about';
+        });
+
+        const music = document.querySelector('.music');
+        music.addEventListener('click', () => {
+            window.location.href = '/music';
+        });
+
+    </script>
 </body>
 </html>

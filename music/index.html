@@ -42,7 +42,7 @@
                 <p>dwallah<br>[ft. VILL]</p>
             </div>
             <div class="cube forgetful">
-                <p>fogetful<br>creatures</p>
+                <p>forgetful<br>creatures</p>
             </div>
             <div class="cube cyberpsycho">
                 <p>cyberpsycho<br>[clip]</p>
@@ -77,6 +77,8 @@
 
         const leftButton = document.querySelector('.left');
         const rightButton = document.querySelector('.right');
+
+        const band = [document.querySelector('ent'), document.querySelector('night'), document.querySelector('noise')];
 
         let leftinvis = false;
         let rightinvis = false;
@@ -121,9 +123,22 @@
 
         cards.forEach(card => {
             card.addEventListener('click', () => {
+                if(card.classList.contains('ent') || card.classList.contains('night') || card.classList.contains('noise')) {
+                    if(card.classList.contains('ent')) {
+                        window.location.href = 'https://nixandpeace.bandcamp.com/'; 
+                    }
+                    if(card.classList.contains('night')) {
+                        window.location.href = 'https://nixandpeace.bandcamp.com/album/nights';
+                    }
+                    if(card.classList.contains('noise')) {
+                        window.location.href = 'https://nixandpeace.bandcamp.com/album/noise';
+                    }
+                    return;
+                }
                 window.location.href = 'https://soundcloud.com/n_a_p2019';
             });
         });
+
     </script>
 </body>
 </html>
